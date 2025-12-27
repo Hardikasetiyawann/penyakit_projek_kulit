@@ -1,0 +1,38 @@
+
+# Project Specific Folders
+data/
+results/
+venv/
+
+# Python Cache & Build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment Files
+.env
+.env.*
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs & Temporary Files
+*.log
+*.tmp
+
+# Model / Training Artifacts
+*.h5
+*.ckpt
+*.pt
+*.onnx
+
+# Jupyter
+.ipynb_checkpoints/
