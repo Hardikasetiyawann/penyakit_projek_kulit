@@ -1,17 +1,23 @@
+
+---
+
+```markdown
 # Skin Disease Classification using CNN and SVM
 
-This repository contains an image classification system for skin diseases using
+This repository presents an image classification system for skin disease detection using
 **Convolutional Neural Network (CNN)** and **Support Vector Machine (SVM)**.
-The system is designed to classify skin condition images into three categories:
+The system classifies skin condition images into three categories:
 **Sehat**, **Panu**, and **Skabies**.
 
-The CNN model is used as a deep learning approach for end-to-end image classification,
-while the SVM model serves as a traditional machine learning baseline using flattened
+CNN is used as a deep learning approach for end-to-end image classification,
+while SVM serves as a traditional machine learning baseline using flattened
 grayscale image features.
 
 ---
 
 ## 📁 Project Structure
+
+```
 
 penyakit_projek_kulit/
 │
@@ -34,36 +40,40 @@ penyakit_projek_kulit/
 │   ├── cnn_loss_curve_final.png
 │   ├── cnn_confusion_matrix_final.png
 │   ├── svm_confusion_matrix_final.png
-│   └── image_visualizations (*.png)
+│   └── visualization_outputs.png
 │
 ├── venv/            # virtual environment (ignored)
 ├── .gitignore
 └── README.md
 
+```
+
+> **Note:** The `data`, `results`, and `venv` directories are excluded from version control.
+
 ---
 
 ## 🧠 Models Implemented
 
-### 1. Convolutional Neural Network (CNN)
+### Convolutional Neural Network (CNN)
 - Input image size: **50 × 50**
-- Image mode: **Grayscale**
+- Image type: **Grayscale**
 - Architecture:
-  - Convolution + Max Pooling layers
-  - Fully Connected layer with Dropout
+  - Convolutional layers with Max Pooling
+  - Fully connected layer with Dropout
   - Softmax output layer (3 classes)
 - Optimizer: **Adam**
 - Loss function: **Categorical Crossentropy**
 
-### 2. Support Vector Machine (SVM)
+### Support Vector Machine (SVM)
 - Kernel: **Linear**
-- Input: Flattened grayscale image vectors
-- Feature normalization: Pixel values scaled to range 0–1
+- Input features: Flattened grayscale image vectors
+- Feature scaling: Pixel values normalized to **0–1**
 
 ---
 
 ## ⚙️ Requirements
 
-- Python **3.10 / 3.11**
+- Python **3.10** or **3.11**
 - TensorFlow
 - NumPy
 - OpenCV
@@ -73,60 +83,68 @@ penyakit_projek_kulit/
 
 Install dependencies:
 
+```
+
 pip install numpy opencv-python matplotlib seaborn scikit-learn tensorflow
+
+```
 
 ---
 
 ## ▶️ How to Run
 
-1. Prepare the dataset following the folder structure in `data/train` and `data/test`.
-2. Activate the virtual environment (optional).
-3. Run the model:
+1. Prepare the dataset according to the folder structure in `data/train` and `data/test`.
+2. (Optional) Activate the virtual environment.
+3. Run the training and evaluation script:
 
-cd models  
+```
+
+cd models
 python model_cnn_svm.py
+
+```
 
 ---
 
 ## 📊 Output
 
-The program will automatically generate and save the following outputs:
+After execution, the system automatically generates:
 
-- CNN training accuracy and loss curves  
-- CNN confusion matrix  
-- SVM confusion matrix  
-- Sample image visualizations for each class  
+- CNN training accuracy and loss curves
+- CNN confusion matrix
+- SVM confusion matrix
+- Sample image visualizations for each class
 
-All outputs are stored in the `results/` directory.
+All output files are saved in the `results/` directory.
 
 ---
 
-## 📌 Important Notes on Accuracy
+## 📌 Notes on Model Accuracy
 
-The accuracy of the CNN and SVM models is **highly dependent on the size and quality of the dataset**.
-To obtain more reliable and generalizable results, it is strongly recommended to:
+The accuracy of both CNN and SVM models is **highly dependent on the quantity and quality of the dataset**.
+For more reliable and generalizable results, it is strongly recommended to:
 
 - Use a **large number of training images** for each class
-- Ensure **balanced data distribution** across classes
-- Use images with **consistent quality and resolution**
-- Consider applying **data augmentation** techniques
-- Perform **cross-validation** for more robust evaluation
+- Ensure **balanced data distribution**
+- Maintain **consistent image quality and resolution**
+- Apply **data augmentation** techniques
+- Perform **cross-validation** for robust evaluation
 
-Using a limited dataset may result in overfitting and reduced model performance on unseen data.
+Using a limited dataset may lead to overfitting and reduced performance on unseen data.
 
 ---
 
 ## 🔬 Research and Academic Use
 
-This project can be used as:
-
-- A baseline experiment for medical image classification
-- A comparison study between CNN and SVM approaches
+This project can be used for:
+- Baseline experiments in medical image classification
+- Comparative studies between deep learning and traditional machine learning methods
 - Supporting material for academic research, thesis, or journal publications
 
 ---
 
 ## 👤 Author
 
-Developed by **Hardika Setiyawan**  
+**Hardika Setiyawan**  
 Informatics – Intelligent Systems / Machine Learning
+```
