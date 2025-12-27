@@ -31,12 +31,10 @@ penyakit_projek_kulit/
 │   ├── cnn_confusion_matrix_final.png
 │   ├── svm_confusion_matrix_final.png
 │
-├── venv/            # virtual environment (ignored)
+├── venv/            # virtual environment
 ├── .gitignore
 └── README.md
 ```
-
-> **Note:** The `data`, `results`, and `venv` directories are excluded from version control.
 
 ---
 
@@ -107,12 +105,7 @@ All output files are saved in the `results/` directory.
 
 ## 📌 Notes on Model Accuracy
 
-The accuracy of both CNN and SVM models is **highly dependent on the quantity and quality of the dataset**. For better performance, it is recommended to:
-
-* Use a **large number of training images**
-* Maintain **balanced class distributions**
-* Apply **data augmentation**
-* Use **cross-validation**
+The accuracy of both CNN and SVM models is **highly dependent on the quantity and quality of the dataset**. For better performance, it is recommended to using large datasets.
 
 ---
 
