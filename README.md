@@ -9,7 +9,7 @@ CNN is used as a deep learning approach for end-to-end image classification, whi
 ## 📁 Project Structure
 
 ```
-penyakit_projek_kulit/
+skin-disease-classification-cnn-svm/
 │
 ├── data/
 │   ├── train/
